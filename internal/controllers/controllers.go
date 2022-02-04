@@ -19,6 +19,7 @@ type InputNews struct {
 	Content     string    `json:"content"`
 }
 
+// TODO support pagination
 func FindNews(c *gin.Context) {
 	var news []models.News
 	database.DB.Find(&news)
@@ -49,6 +50,7 @@ func CreateNews(c *gin.Context) {
 	})
 }
 
+// TODO support pagination
 func FindNew(c *gin.Context) {
 	var news []models.News
 	if err := database.DB.Where("title like '%%%s'", c.Param("keyword")).Find(&news).Error; err != nil {

@@ -56,6 +56,8 @@ func (a *Agent) Run(ctx context.Context) {
 				if err != nil {
 					panic(err)
 				}
+				// TODO: add sync.WaitGroup to parse full content
+				// and save to database concurrently
 				saveToDB(articles)
 			}
 		case <-ctx.Done():
