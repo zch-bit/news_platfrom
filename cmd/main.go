@@ -38,7 +38,7 @@ func main() {
 	}
 
 	// Run new collector agent as a goroutine
-	a := agent.NewAgent(agent.AgentOpts{
+	a := agent.NewAgent(agent.Opts{
 		Endpoint:     envs.Endpoint,
 		Token:        envs.Token,
 		Q:            envs.Q,

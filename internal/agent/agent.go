@@ -15,7 +15,7 @@ import (
 	"newsplatform/internal/models"
 )
 
-type AgentOpts struct {
+type Opts struct {
 	Endpoint     string
 	Token        string
 	Q            string
@@ -33,7 +33,7 @@ type Agent struct {
 	MaxPage      int
 }
 
-func NewAgent(opts AgentOpts) Agent {
+func NewAgent(opts Opts) Agent {
 	return Agent{
 		Endpoint:     opts.Endpoint,
 		Token:        opts.Token,
